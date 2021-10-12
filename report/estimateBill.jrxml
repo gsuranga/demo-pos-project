@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Estimate" pageWidth="595" pageHeight="500" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="estimateTable"/>
+	<parameter name="customer" class="java.lang.String"/>
+	<parameter name="netAmount" class="java.lang.Double"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Part Number" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Unit Price" class="java.lang.Double"/>
+	<field name="Amount" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="5" width="133" height="40"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Estimate]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="414" y="5" width="138" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="0" width="53" height="20"/>
+				<textElement/>
+				<text><![CDATA[Customer :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="59" y="0" width="344" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{customer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="1" width="100" height="20"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Part Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="1" width="100" height="20"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="1" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="0" width="97" height="20"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="0" width="77" height="20"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="6" y="2" width="100" height="20"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="2" width="100" height="20"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Part Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="4" width="100" height="20"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="4" width="51" height="20"/>
+				<textElement textAlignment="Right">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="2" width="85" height="20"/>
+				<textElement textAlignment="Right">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Unit Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="4" width="77" height="20"/>
+				<textElement textAlignment="Right">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="11" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="46">
+			<staticText>
+				<reportElement x="237" y="1" width="100" height="20"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Net Amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="20"/>
+				<textElement textAlignment="Right" markup="html">
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{netAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="7" y="20" width="100" height="12"/>
+				<textElement/>
+				<text><![CDATA[-----------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="32" width="100" height="14"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="22" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Valied for 30 days]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="18" splitType="Stretch"/>
+	</summary>
+</jasperReport>

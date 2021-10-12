@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-06-24T12:00:35 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="62dba782-9da5-4903-8d5d-b703848f02fa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="customer" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="paid" class="java.lang.String"/>
+	<parameter name="balence" class="java.lang.String"/>
+	<parameter name="oid" class="java.lang.String"/>
+	<parameter name="labAmount" class="java.lang.String"/>
+	<field name="Item Code" class="java.lang.String"/>
+	<field name="Part No" class="java.lang.String"/>
+	<field name="Discount" class="java.lang.String"/>
+	<field name="Unit Price" class="java.lang.String"/>
+	<field name="Quantity" class="java.lang.String"/>
+	<field name="Amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="11" width="512" height="56" forecolor="#003333" uuid="9bc20cb9-4181-433e-bf07-283a4d3e914b"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="44"/>
+				</textElement>
+				<text><![CDATA[Dimo-Lanka]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd/MM/yy">
+				<reportElement x="440" y="-99" width="100" height="20" uuid="c1890c58-d214-498c-86cf-c133b174a98e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="0" width="52" height="20" uuid="4be3f572-0541-42de-9c5b-ea86260afa4c"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Customer:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="76" y="0" width="218" height="20" uuid="2f3b47da-defc-4582-8da5-d8bce58af99c"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{customer}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="12" y="25" width="528" height="1" uuid="37e52ad5-e8d2-437d-a67a-1f9a2cd5a7cb"/>
+			</line>
+			<textField>
+				<reportElement x="457" y="0" width="83" height="20" uuid="f6f69670-9fe0-4d72-8aed-019aa93fdf30"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{oid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="357" y="0" width="100" height="20" uuid="410e5ca5-4735-49bf-8648-ea291085a47b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Order ID:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="86" y="2" width="100" height="20" uuid="f73d6dfd-91fb-47e8-aa50-994ac4b78188"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Part No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="0" width="54" height="20" uuid="fdb25c7f-a58e-4291-887b-f0796b2dbb9b"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="2" width="52" height="20" uuid="1f90e0ec-5c05-4278-9721-718c1b617fa6"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Item Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="2" width="68" height="20" uuid="82fd506f-5274-4e11-99e3-08f36b8b775f"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="2" width="100" height="20" uuid="04f5749c-2637-4b52-b2ff-d0e0a7d4bc93"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="2" width="100" height="20" uuid="5407fe50-cf0b-4849-9d3c-2b369adfd317"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="86" y="0" width="100" height="20" uuid="b23b1766-4333-430c-ad77-5a95caaff278"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Part No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="0" width="64" height="20" uuid="33c68720-f628-45ed-bc2d-1f19dc708bc6"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="0" width="68" height="20" uuid="dcf5a2f7-4840-419a-87d0-e18f0780afb6"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Unit Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="0" width="54" height="20" uuid="f1fb0b95-3faf-4dec-bba7-afd58524ab20"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="100" height="20" uuid="39271fa5-cdeb-4ad1-b72f-86bbadc80867"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="100" height="20" uuid="70337234-5817-4a3d-b27b-1cf6ad7d7a83"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="93" splitType="Stretch">
+			<textField>
+				<reportElement x="440" y="30" width="100" height="20" forecolor="#009999" uuid="54204a60-53ae-40f9-8909-bfcd62be2ef8"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="30" width="100" height="20" forecolor="#009999" uuid="b83cbd09-cd94-4858-9fd9-32d993244c4e"/>
+				<textElement>
+					<font fontName="Consolas" size="12"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="50" width="100" height="20" uuid="a5ec6e04-5401-4864-983d-f31ae464613f"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{paid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="50" width="100" height="20" uuid="9297cacf-19f6-4e80-8c37-acf955e0c853"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Paid:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="70" width="100" height="20" uuid="f43bace5-cef8-4e44-b799-b55a9c739d37"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{balence}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="70" width="100" height="20" uuid="422c0bce-5f3b-46a5-bb6f-4b79bfe67f36"/>
+				<textElement>
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Balence:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="10" width="100" height="21" uuid="d8a79ba1-2bd3-4c4e-8db6-f7f35dbf4ef0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Consolas"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{labAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="20" uuid="b6bf7ef1-cf3f-44da-a76d-b3e96be7cb15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Consolas"/>
+				</textElement>
+				<text><![CDATA[Labour Cost]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="66" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="20" width="100" height="30" uuid="d4987a8a-942d-4554-8f40-e3d598afb7c5"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

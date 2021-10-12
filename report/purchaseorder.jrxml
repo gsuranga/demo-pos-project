@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="purchaseorder" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="3c28d04b-a076-4572-9d72-712ef371e8af">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="createdname" class="java.lang.String"/>
+	<parameter name="dealerAccountNo" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Part No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Quantiy" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="241" splitType="Stretch">
+			<staticText>
+				<reportElement x="113" y="11" width="284" height="20" backcolor="#FFFFFF" uuid="5af2e872-7457-4a36-a24c-c630b0bffe18"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PURCHASE ORDER-TATA GENUINE SPARE PARTS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="45" width="20" height="20" uuid="4890a61b-a6db-4b7c-b36b-ea54cb3f0643"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[To:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="45" width="379" height="20" uuid="8fc31fb7-78c5-4aa4-b40d-21f0db6fbbf7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[DIESEL  & MOTOR  ENGINEERING  PLC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="65" width="100" height="20" uuid="bff1988e-edf1-4147-9a1d-36e79fe30917"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Registeriered Office]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="85" width="100" height="20" uuid="98619543-7920-41da-af93-86ce88c64879"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="105" width="100" height="20" uuid="d976ce8a-3574-4ade-8bd2-074f5aedadeb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Fax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="125" width="100" height="20" uuid="bdbef017-40c9-4062-b153-3fc0d1327955"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="65" width="279" height="20" uuid="207708cc-8c9d-4ef0-9696-55a043c1586d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:P.O.Box 339, No 65 Jetawana Road ,Colombo 14,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="85" width="279" height="20" uuid="b2a2dbe9-5434-45e9-838f-edbb9109ef08"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:2449797,2338883,4602100,4602200]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="105" width="154" height="20" uuid="5efc843d-a840-43f7-9771-1d1c40a7c8e5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:4615007,4741854]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="125" width="154" height="20" uuid="7aef5c07-bddf-49e0-9fc2-58de704a2202"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:dimo@dimolanka.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="142" width="40" height="20" uuid="52421019-a77d-4731-bbf6-b757cb7070f0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[From:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="163" width="100" height="20" uuid="40ebff08-4fd2-4ff9-a0c7-f067b203c3fa"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dealer Name:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="382" y="163" width="168" height="20" uuid="7e773d44-5312-4236-be12-64610e4117fc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{createdname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="56" y="183" width="100" height="20" uuid="f4d1fb0f-a6f6-4f0b-bdae-8d2717abbd7b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="203" width="112" height="20" uuid="cd0c8e3b-ec75-4ed1-8be9-ac1afa39689a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dealer Account No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="125" width="36" height="20" uuid="4b6788e6-9ebb-4994-827c-cbbe01e51620"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="345" y="126" width="210" height="20" uuid="5fc5fb45-539d-4b4c-98e3-21c6550ec40d"/>
+			</rectangle>
+			<line>
+				<reportElement x="422" y="127" width="1" height="20" uuid="354ff3d8-49b5-4b07-9118-12030121ce0d"/>
+			</line>
+			<line>
+				<reportElement x="497" y="127" width="1" height="19" uuid="5ca7f6fc-134b-49c7-8270-4a91667520e2"/>
+			</line>
+			<staticText>
+				<reportElement x="382" y="106" width="37" height="20" uuid="4dff4ffa-7daa-4578-8c36-8710d75e4025"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="105" width="36" height="20" uuid="226aa2af-928b-4c26-8489-92ae452e738a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="106" width="45" height="20" uuid="af66f6cc-e3ee-4ee0-8b4a-559704838936"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="382" y="203" width="168" height="20" uuid="645f91ea-8fb5-46c0-a58a-4652ff48b99e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dealerAccountNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="345" y="126" width="77" height="20" uuid="ff41bcca-fb26-4672-8fee-561d1dca1775"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="126" width="74" height="20" uuid="feb57ba7-3504-4091-9a1c-2997dd27a11f"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="125" width="55" height="20" uuid="26816758-f7c2-43da-822d-75508cbe5f32"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="dd">
+				<reportElement x="350" y="130" width="60" height="12" uuid="dbbc03b1-0cb2-422e-afb1-39152b724d6b"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="M">
+				<reportElement x="430" y="130" width="60" height="12" uuid="c8e6b423-3d08-4595-a8ec-229b00b565c6"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern=" yyyy">
+				<reportElement x="499" y="131" width="44" height="12" uuid="bbe9ddd6-6ff6-413f-a9d4-9df288aa1a99"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="219" y="0" width="175" height="20" uuid="cf6a176d-b2f6-4a2e-8597-c402088b058c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="0" width="151" height="20" uuid="32045d7c-e578-417b-bbde-1c30a4c00ab1"/>
+				<box bottomPadding="4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Part No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="111" height="20" uuid="740fc469-5daf-4979-82b4-4d48fd6f5b2c"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantiy]]></text>
+			</staticText>
+			<line>
+				<reportElement x="33" y="28" width="511" height="2" uuid="69a6b3bb-78e0-4830-8f26-02105609f6df"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="222" y="3" width="175" height="20" uuid="ef8448c8-43f0-4b92-baa3-1e1283ac7772"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="0" width="151" height="20" uuid="b9271113-4e00-4690-a660-1909a0d8aed5"/>
+				<textFieldExpression><![CDATA[$F{Part No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="111" height="20" uuid="c331138d-3dd8-4576-b33e-8bf25ad858b1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Quantiy}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="263" splitType="Stretch">
+			<staticText>
+				<reportElement x="56" y="10" width="100" height="20" uuid="8211b261-d1ed-4e36-b81b-c5b36fc6a5cf"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Mode:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="34" width="63" height="20" uuid="214f8ce5-08ce-45eb-bd0a-9d2f37841e33"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="60" width="100" height="20" uuid="cfa4c4b6-7abb-4492-8fd2-f20bb7540fa5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit(30 days)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="194" y="60" width="70" height="20" uuid="9992d805-9aed-41c4-a01d-d7370e4abc2a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="194" y="33" width="70" height="20" uuid="2783b8d1-93c2-47f6-afc9-b7348102d16d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="282" y="30" width="262" height="182" uuid="03b0316f-fe54-48f4-a5ef-12a1ae7bf780"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="286" y="30" width="258" height="20" uuid="c5a46eb7-2b5b-4a1c-9ae6-9750d66175e7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Please make arrangements to deliver/Supply  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="50" width="258" height="20" uuid="4d8a4b45-bf43-4e1f-bd1c-ab45359f1f8e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[above mention Items.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="77" width="258" height="20" uuid="b055f907-b484-4fa4-8e3f-f930bfb2503d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Authorized by:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="33" y="97" width="231" height="115" uuid="543f26bb-5695-4a08-9671-dbba0c25b124"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="33" y="101" width="180" height="20" uuid="2bf39e75-671b-49fc-a01d-7d2a46c1d97b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Office use only(WIP/Invoice No)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="212" width="214" height="20" uuid="309db113-bc7f-4d87-8270-d9e8b7661b3c"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature & Rubber Stamp Of Dealer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="101" width="20" height="152" uuid="687683af-cc95-4d52-b185-5711be0931f0"/>
+				<textElement verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Created By Ceylon Linux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="101" width="13" height="152" uuid="df45075e-cd9a-471c-8460-cb19bf0b87bf"/>
+				<textElement verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[www.ceylonlinux.com]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
